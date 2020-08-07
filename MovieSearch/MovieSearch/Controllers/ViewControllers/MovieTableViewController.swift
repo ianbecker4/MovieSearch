@@ -33,20 +33,9 @@ class MovieTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell else {return UITableViewCell()}
         
         let movie = self.movies[indexPath.row]
-    
-        MovieController.fetchImage(for: movie) { (result) in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let image):
-                    cell.movieTitleLabel.text = movie.title
-                    cell.movieRatingLable.text = "Rating: \(movie.rating)"
-                    cell.movieDescriptionLabel.text = movie.description
-                    cell.movieImageView.image = image
-                case .failure(let error):
-                    print("Error in \(#function) : \(error.localizedDescription) \n---\n \(error)")
-                }
-            }
-        }
+        
+        cell.movie = movie
+        
         return cell
     }
     

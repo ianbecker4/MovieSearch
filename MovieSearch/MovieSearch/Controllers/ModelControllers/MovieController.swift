@@ -56,7 +56,8 @@ class MovieController {
     static func fetchImage(for movie: Movie, completion: @escaping (Result<UIImage, NetworkError>) -> Void) {
         
         guard let baseURL = imageURL else {return completion(.failure(.invalidURL))}
-        let finalURL = baseURL.appendingPathComponent(movie.image)
+        guard let posterImage = movie.image else {return completion(.failure(.invalidURL))}
+        let finalURL = baseURL.appendingPathComponent(posterImage)
         print(finalURL)
         
         URLSession.shared.dataTask(with: finalURL) { (data, _, error) in
@@ -73,3 +74,4 @@ class MovieController {
         }.resume()
     }
 } // End of class
+
