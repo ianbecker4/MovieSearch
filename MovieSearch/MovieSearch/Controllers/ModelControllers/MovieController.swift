@@ -1,37 +1,13 @@
+//
+//  MovieController.swift
+//  MovieSearch
+//
+//  Created by Ian Becker on 8/7/20.
+//  Copyright © 2020 Ian Becker. All rights reserved.
+//
+
+import Foundation
 import UIKit
-
-// API Key
-// https://api.themoviedb.org/3/search/movie?api_key={api_key}&query={searchTerm}
-// My key : c78f1ff73420ad8c387f62d8fa9d553d
-
-// Example image URL
-// https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg
-// http://image.tmdb.org/t/p/w500/(imageEndpoint)
-
-// MARK: - Model
-
-struct MovieTopLevelObject: Codable {
-    
-    let results: [Movie]
-    
-}
-
-struct Movie: Codable {
-    
-    let title: String
-    let rating: Double
-    let description: String
-    let image: String
-    
-    enum CodingKeys: String, CodingKey {
-        case title = "original_title"
-        case rating = "vote_average"
-        case description = "overview"
-        case image = "poster_path"
-    }
-} // End of struct 
-
-// MARK: - Model Controller
 
 class MovieController {
     
@@ -97,36 +73,3 @@ class MovieController {
         }.resume()
     }
 } // End of class
-
-
-
-
-
-// MARK: - Helpers
-enum NetworkError: LocalizedError {
-    
-    case invalidURL
-    case thrownError(Error)
-    case noData
-    case unableToDecode
-    
-    var errorDescription: String? {
-        switch self {
-        case .thrownError(let error):
-            return "Error: \(error.localizedDescription) -> \(error)"
-        case .invalidURL:
-            return "Unable to reach the server."
-        case .noData:
-            return "The server responded with no data."
-        case .unableToDecode:
-            return "The server responded with bad data."
-        }
-    }
-}
-
-// MARK: - "View Controller"
-
-MovieController.fetchMovie(searchTerm: "Ace Ventura") { (movie) in
-    print(movie)
-}
-
