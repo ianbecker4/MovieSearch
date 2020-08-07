@@ -49,6 +49,11 @@ class MovieTableViewController: UITableViewController {
         }
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return view.frame.height / 4
+    }
+    
 } // End of class
 
     // MARK: - Extensions
