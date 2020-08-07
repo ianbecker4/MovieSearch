@@ -17,6 +17,7 @@
 		4B56A00424DDC9FC00F2D6C3 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B56A00324DDC9FC00F2D6C3 /* Movie.swift */; };
 		4B56A00624DDCA7700F2D6C3 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B56A00524DDCA7700F2D6C3 /* MovieTableViewController.swift */; };
 		4B56A00824DDCB4500F2D6C3 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B56A00724DDCB4500F2D6C3 /* MovieTableViewCell.swift */; };
+		4B56A00D24DDD15000F2D6C3 /* UITableViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B56A00C24DDD15000F2D6C3 /* UITableViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4B56A00324DDC9FC00F2D6C3 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		4B56A00524DDCA7700F2D6C3 /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
 		4B56A00724DDCB4500F2D6C3 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		4B56A00C24DDD15000F2D6C3 /* UITableViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				4B569FFF24DDC98B00F2D6C3 /* NetworkError.swift */,
+				4B56A00C24DDD15000F2D6C3 /* UITableViewControllerExtension.swift */,
 			);
 			path = HelpersAndExtensions;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B56A00224DDC9CB00F2D6C3 /* MovieController.swift in Sources */,
+				4B56A00D24DDD15000F2D6C3 /* UITableViewControllerExtension.swift in Sources */,
 				4B56A00024DDC98B00F2D6C3 /* NetworkError.swift in Sources */,
 				4B56A00824DDCB4500F2D6C3 /* MovieTableViewCell.swift in Sources */,
 				4B56A00624DDCA7700F2D6C3 /* MovieTableViewController.swift in Sources */,
